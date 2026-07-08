@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { createClient } from '@/lib/supabase/server'
 import { redirect } from 'next/navigation'
+import { BottomNav } from '@/components/bottom-nav'
 
 function todayISO() {
   return new Date().toISOString().slice(0, 10)
@@ -169,6 +170,8 @@ function DashboardView({
           📊 View History
         </Link>
       </div>
+
+      <BottomNav />
     </main>
   )
 }
